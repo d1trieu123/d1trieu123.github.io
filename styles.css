@@ -40,3 +40,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.project h3 a,
+.projects .project h3 a {
+    color: blue;
+}
