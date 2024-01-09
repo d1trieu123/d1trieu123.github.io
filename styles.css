@@ -45,3 +45,8 @@ footer {
 .projects .project h3 a {
     color: blue;
 }
+
+.mypic{
+    width: 150px;
+    height: 150px;
+}
