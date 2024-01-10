@@ -2,12 +2,44 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
+.mypic{
+    width: 100%;
+    max-width: 15em;
+    max-height: 20em
+}
+
+
 .container {
-    max-width: 800px;
+    max-width: 1300px;
     margin: 0 auto;
+
+}
+
+.about-pic{
+
+    display: flex;
+}
+
+header h1 {
+    margin: 0;
+}
+.demo-gifs {
+    height: auto;
+    max-width: 40em;
+    max-height: 50em;
+    
+}
+.about-me,
+.projects,
+.contact {
+    padding: 1em 0;
+}
+
+.project h3 a,
+.projects .project h3 a {
+    color: blue;
 }
 
 header {
@@ -20,36 +52,16 @@ header {
     align-items: center;
 }
 
-header h1 {
-    margin: 0;
-}
-
-.about-me,
-.projects,
 .contact {
-    padding: 2em 0;
-}
-
-.projects .project {
-    margin-bottom: 1em;
-}
-
-footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1em 0;
-    position: fixed;
     bottom: 0;
     width: 100%;
 }
 
-.project h3 a,
-.projects .project h3 a {
-    color: blue;
+.contact-link{
+    color: white;
 }
 
-.mypic{
-    width: 200px;
-    height: 200px;
-}
