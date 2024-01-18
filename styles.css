@@ -33,12 +33,14 @@ header h1 {
 }
 .about-me,
 .projects,
-.contact {
+.contact,
+.other-work{
     padding: 1em 0;
 }
 
 .project h3 a,
-.projects .project h3 a {
+.projects .project h3 a 
+{
     color: blue;
 }
 
