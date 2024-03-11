@@ -14,6 +14,9 @@
         <div class="container">
             <h1>Darren Trieu  </h1>
             <p>M.S Computer Science Student</p>
+            <nav>
+                <a class = "contact-link" href="index.html">Home</a> | <a  class = "contact-link" href="projects.html">My Work</a> 
+            </nav>
         </div>
         
     </header>
@@ -41,96 +44,58 @@
         </div>
     </section>
 
-    <section class="projects">
+    <section class="education">
         <div class="container">
             <hr>
-            <h2>Projects</h2>
+            <h2>Education</h2>
 
-            <div class="project">
-                <h3> UCal San Diego <a target="_blank" href="https://github.com/cse210-team5/ucal_san_diego"> View Repo </a></h3>
-                
-                <p class = "project-desc"> This was a project I made for my principles of software engineering course at UCSD where I worked in a team of 4 to create a mobile application that helps students at UCSD track their food
-                    and calorie intake with the dining halls on campus. The project was great for me because it was my first time making a full-stack application from scratch, interacting with a database we created using MongoDB,
-                    while also giving me practice in mobile development with React Native. In this project we practiced Agile development and managed backlogs and deliverables as part of our quarter project. 
-                </p>
-                <p>
-                    <img class = "demo-gifs" src="images\ucal.gif" alt = "ucal gif">
-                </p>
-            
+            <div class="degrees">
+                <h3>Degrees</h3>
+                <ul>
+                    <li>B.S Pharmacological Chemistry, UCSD, 2022</li>
+                    <li>M.S Computer Science, UCSD, expected 2025</li>
+                    <!-- Add more degrees if necessary -->
+                </ul>
             </div>
-
-            <div class="project">
-                <h3> Xquery Intepreter <a target="_blank" href="https://github.com/Allison-Turner/cse232b-proj"> View Repo </a></h3>
-                
-                <p class = "project-desc"> This is a project I created with a partner that functions as an Xquery interpreter. Xquery is a language used to query XML documents and we were tasked with creating a program that would take in an Xquery file and an XML file and return the results of the query. 
-                    Since the interpreter was built from scratch in Java, we utilized ANTLR to create a grammar for the Xquery language and then used the ANTLR library to parse the Xquery file and XML file. In this project we have 3 seperate milestones, creating an XPath interpreter, extending this interpreter to XQuery,
-                    and finally, creating a join operator to improve the speed of our queries. This project was meant to teach us how to implement database like operations while also giving me practice creating large java projects with a partner.
-                </p>
             
+            <!-- Current Coursework -->
+            <div class="coursework current-coursework">
+                <h3>Current Coursework</h3>
+                <ul>
+                    <li><span class="course-name">UCSD - Human Centered Computing and Health</span>
+                    <li><span class="course-name">UCSD - Graduate Networked Systems</span> 
+                    <li><span class="course-name">UCSD - Principles of Computer Architecture</span> 
+                    <!-- Add more current courses as needed -->
+                </ul>
             </div>
-
             
-            <div class="project">
-                <h3> Hangman Probability Web Game <a target="_blank" href="https://github.com/d1trieu123/hangman/tree/main"> View Repo </a> <a target="_blank" href="https://d1trieu123.github.io/hangman/"> View Demo </a> </h3>
-                
-                <p class = "project-desc"> This was a project I made extending upon a homework assignment from my probabilstic reasoning and learning course. Our assignment was to create
-                    and implement and algorithm that would tell you the best guess given the state of a hangman game and its probability. I thought it'd be cool to design a simple front end for the program
-                    while also giving you the opportunity to play with the algorithm to see how your guesses measured up. I followed a react tutorial to create the hangman front end but had to incorporate 
-                    the learning algorithm I created into the repo. 
-                </p>
-                <p>
-                    <img class = "demo-gifs" src="./images/hangman.gif" alt = "hangman gif">
-                </p>
-            
+            <!-- Past Coursework -->
+            <div class="coursework past-coursework">
+                <h3>Past Coursework</h3>
+                <ul>
+                    <li><span class="course-name">UCSD - Principles of Programming Languages</span>
+                    <li><span class="course-name">UCSD - Principles of Data Base Systems</span> 
+                    <li><span class="course-name">UCSD - Probabilistic Reasoning  Learning</span>
+                    <li><span class="course-name">UCSD - Database System Implementation</span>
+                    <li><span class="course-name">UCSD - Principle of Software Engineering</span>
+                    <li><span class="course-name">UCSD - Algorithm Design and Analysis</span>
+                    <li><span class="course-name">Georgia Tech - Data Structures and Algorithms</span> 
+                    <li><span class="course-name">Georgia Tech - Object Oriented Programming with Java </span> 
+                    <li><span class="course-name">Georgia Tech- Computing in Python</span> 
+                    <!-- Add more past courses as needed -->
+                </ul>
             </div>
-
-            <div class="project">
-                <h3> Terminal Asteroid Typing Game <a target="_blank" href="https://github.com/TeDand/word-game"> View Repo </a></h3>
-                
-                <p class = "project-desc"> This was my first school project where I worked with other classmates to create a terminal-based game using Haskell and the Brick library. The game functions like a lot of the common spaceship
-                    based typing games on the internet and we thought it would be cool to recreate it using the Brick library. This was a great experience for me because it was my first opportunity to collaborate on a project 
-                    with other people, learn how to implement and navigate libraries I wasn't previously familiar with (Brick), and most importantly, it was my first time using Git for version control with other people.
-                    Through this, I practiced my skills in discussing code with my peers, fixing bugs in both my and my project mates code, and resolve merge conflicts with Git. While the game we made seemed simple, I learned so much with this 
-                    project and I'm excited for the other projects I'll create in the future!
-                </p>
-                <p>
-                    <img class = "demo-gifs" src="./images/word_game_gif.gif" alt = "word-game gif">
-                </p>
-            
-            </div>
-            <div class="project">
-                
-                <h3> Service Industry TipBot  <a target="_blank" href="https://github.com/d1trieu123/tipbot"> View Repo </a> <a target="_blank" href="https://d1trieu123.github.io/tipbot/"> View Demo </a></h3>
-                
-                <p class = "project-desc"> During my undergrad career, I worked at a local restaurant in La Jolla called Din Tai Fung. It was something I really enjoyed and when I started my computer science journey, I thought
-                    making a tip calculator would be a fun project to work on. I wanted to make something that would be useful for my coworkers and I, so I decided to make a tip calculator where
-                    servers could log their daily tips and sales, and see how much they made that day. Addiionally, you can filter your shifts by day or shift type to see how your averages change per shift.
-                    I used Javascript, React, and CSS to build the frontend and am currently still in the process of adding a backend to store user data.
-                </p>
-                <p> <img class = "demo-gifs" src="./images/tipbot.gif" alt = "tipbot demo" > </p>
-                
-            </div>
-        
-
-        </div>
-    </section>
-    <hr>
-    <section class="other-work">
-        <div class="container">
-            <h2>Other Work</h2>
-
-            <p><a target="_blank" href="https://kadonagalab.biosci.ucsd.edu/" style="color: blue;"> UCSD Kadonaga Website </a> - A website I created for my lab during COVID. </p> 
             
         </div>
     </section>
 
-    <section class="contact">
+    <footer class="contact">
         <div class="container">
             <h2>Contact</h2>
             <p>Email: darrentrieu@gmail.com  <a class = "contact-link" href="https://www.linkedin.com/in/darren-trieu/" target="_blank">LinkedIn </a> <a class = "contact-link" href= "https://github.com/d1trieu123" target="_blank"> Github </a> </p>
         </div>
 
-    </section>
+    </footer>
 
    
 

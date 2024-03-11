@@ -44,6 +44,18 @@ header h1 {
     color: blue;
 }
 
+.coursework ul {
+    list-style-type: none; /* Removes the default list bullet */
+    padding-left: 0; /* Aligns the list to the left */
+}
+
+.coursework ul li {
+    display: flex;
+    justify-content: space-between; /* This will push the "UCSD" part to the end */
+    padding: 5px 0; /* Adds some space around each list item */
+}
+
+
 header {
     background-color: #333;
     color: #fff;
@@ -54,13 +66,21 @@ header {
     align-items: center;
 }
 
-.contact {
+.contact{
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 1em 0;
     bottom: 0;
     width: 100%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    
 }
 
 .contact-link{
