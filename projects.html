@@ -10,18 +10,27 @@
     <header>
         <div class="container">
             <h1>Darren Trieu</h1>
-            <h3>M.S Computer Science Student - UCSD</h3>
+            <p>M.S Computer Science Student - UCSD</p>
             <nav>
                 <a class="contact-link" href="index.html">Home</a> | 
                 <a class="contact-link" href="projects.html">My Work</a>
             </nav>
-            <!-- Additional Links Section -->
             <div class="header-links">
-                <a class="contact-link" href="https://github.com/d1trieu123" target="_blank">GitHub</a> | 
-                <a class="contact-link" href="https://www.linkedin.com/in/darren-trieu/" target="_blank">LinkedIn</a> | 
-                <a class="contact-link" href="resume.pdf" target="_blank">Resume</a> | 
-                <a class="contact-link" href="mailto:darrentrieu@gmail.com">Email</a>
+                <a href="https://github.com/d1trieu123" target="_blank">
+                    <img src="images/github-icon.png" alt="GitHub" class="icon">
+                </a>
+                <a href="https://www.linkedin.com/in/darren-trieu/" target="_blank">
+                    <img src="images/linkedin-icon.png" alt="LinkedIn" class="icon">
+                </a>
+                <a href="assets/Resume.pdf" target="_blank">
+                    <img src="images/resume-icon.png" alt="Resume" class="icon">
+                </a>
+                <a href="javascript:void(0);" onclick="copyToClipboard(event)">
+                    <img src="images/email-icon.png" alt="Email" class="icon">
+                </a>
             </div>
+            <!-- Hidden element for the "Copied!" message -->
+            <span id="copy-notification" class="copy-notification">Copied!</span>
         </div>
     </header>
 
@@ -103,3 +112,25 @@
 
 </body>
 </html>
+
+<script>
+    function copyToClipboard(event) {
+        const email = "darrentrieu@gmail.com";
+        navigator.clipboard.writeText(email).then(function() {
+            const notification = document.getElementById('copy-notification');
+
+            // Set the position near the cursor
+            const mouseX = event.clientX;
+            const mouseY = event.clientY;
+            notification.style.left = mouseX + 10 + 'px'; // Offset by 10px to the right of the cursor
+            notification.style.top = mouseY + 10 + 'px';  // Offset by 10px below the cursor
+
+            notification.style.display = 'block'; // Show the notification
+            setTimeout(function() {
+                notification.style.display = 'none'; // Hide it after 2 seconds
+            }, 500);
+        }, function(err) {
+            console.error("Could not copy text: ", err);
+        });
+    }
+</script>
