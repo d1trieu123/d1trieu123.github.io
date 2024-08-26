@@ -4,57 +4,77 @@ body {
     padding: 0;
 }
 
-.mypic{
+.mypic {
     width: 100%;
     max-width: 15em;
-    max-height: 20em
+    max-height: 20em;
+    display: block;
+    margin: 20px auto;
 }
-
 
 .container {
     max-width: 1300px;
     margin: 0 auto;
-
+    padding: 0 20px; 
 }
 
-.about-pic{
-
+.about-pic {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header h1 {
     margin: 0;
 }
+
 .demo-gifs {
     height: auto;
     max-width: 40em;
     max-height: 50em;
-    
+    display: block;
+    margin: 10px auto; 
 }
+
 .about-me,
 .projects,
 .contact,
-.other-work{
+.other-work {
     padding: 1em 0;
+    text-align: center; 
 }
 
-.project h3 a,
-.projects .project h3 a 
-{
-    color: blue;
+.project {
+    text-align: left;
+    margin-bottom: 2em; 
+}
+
+.project h3,
+.project-desc {
+    margin-bottom: 0.5em; 
+}
+
+.project-desc {
+    list-style-type: disc; 
+    padding-left: 20px; 
+    margin: 0 auto; 
+    max-width: 90%;
+}
+
+.project-desc li {
+    margin-bottom: 0.5em; 
 }
 
 .coursework ul {
-    list-style-type: none; /* Removes the default list bullet */
-    padding-left: 0; /* Aligns the list to the left */
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .coursework ul li {
     display: flex;
-    justify-content: space-between; /* This will push the "UCSD" part to the end */
-    padding: 5px 0; /* Adds some space around each list item */
+    justify-content: space-between;
+    padding: 5px 0;
 }
-
 
 header {
     background-color: #333;
@@ -66,7 +86,7 @@ header {
     align-items: center;
 }
 
-.contact{
+.contact {
     background-color: #333;
     color: #fff;
     text-align: center;
@@ -75,15 +95,69 @@ header {
     width: 100%;
 }
 
-nav{
+nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; 
+    gap: 1em;
     align-items: center;
     color: white;
-    
 }
 
-.contact-link{
+.contact-link {
     color: white;
 }
 
+.header-links {
+    margin-top: 10px;
+    text-align: center; 
+}
+
+.header-links a {
+    color: white; 
+    text-decoration: none;
+    margin: 0 10px; 
+}
+
+.contact-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; 
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+}
+
+.header-links {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.header-links a {
+    margin: 0 10px; 
+}
+
+.icon {
+    width: 30px; 
+    height: 30px;
+    vertical-align: middle; 
+    transition: transform 0.2s;
+}
+
+.icon:hover {
+    transform: scale(1.4); 
+}
+
+.copy-notification {
+    display: none; /* Initially hidden */
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    padding: 5px 10px; /* Some padding */
+    border-radius: 5px; /* Rounded corners */
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    top: 150px; /* Adjust position */
+    right: 575px; /* Adjust position */
+    z-index: 1000; /* Ensure it's above other elements */
+    font-size: 10px; /* Font size for visibility */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional shadow for pop-out effect */
+}

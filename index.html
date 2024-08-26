@@ -9,17 +9,34 @@
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
 </head>
 <body>
-
     <header>
         <div class="container">
-            <h1>Darren Trieu  </h1>
-            <p>M.S Computer Science Student</p>
+            <h1>Darren Trieu</h1>
+            <p>M.S Computer Science Student - UCSD</p>
             <nav>
-                <a class = "contact-link" href="index.html">Home</a> | <a  class = "contact-link" href="projects.html">My Work</a> 
+                <a class="contact-link" href="index.html">Home</a> | 
+                <a class="contact-link" href="projects.html">My Work</a>
             </nav>
+            <div class="header-links">
+                <a href="https://github.com/d1trieu123" target="_blank">
+                    <img src="images/github-icon.png" alt="GitHub" class="icon">
+                </a>
+                <a href="https://www.linkedin.com/in/darren-trieu/" target="_blank">
+                    <img src="images/linkedin-icon.png" alt="LinkedIn" class="icon">
+                </a>
+                <a href="assets/resume.pdf" target="_blank">
+                    <img src="images/resume-icon.png" alt="Resume" class="icon">
+                </a>
+                <a href="javascript:void(0);" onclick="copyToClipboard()">
+                    <img src="images/email-icon.png" alt="Email" class="icon">
+                </a>
+            </div>
+            <!-- Hidden element for the "Copied!" message -->
+            <span id="copy-notification" class="copy-notification">Copied!</span>
         </div>
-        
     </header>
+    
+    
 
     <section class="about-me">
         <div class="container">
@@ -28,14 +45,9 @@
             <div class="about-pic">
                 
             
-            <p class = "text">I'm a current graduate student at UCSD pursuing a Master's in Computer Science. 
-            With a previous background in healthcare, I obtained my BS in Pharmacological Chemistry at UCSD in 2022. After taking a gap year, I decided to change career paths and apply for my 
-            MS in computer science, and began my graduate career in the fall of 2023. Since then, I have learned so much about the field of computer science, and have broadened my skills as a developer
-            through my various graduate courses. My goals now are tyo contiously develop my skills and learn as much as I can so that when I entire the field as a developer, I can make an impact and contribute in the best way possible. <br>
-            <br>
-            In my free time, my hobbies include piano, video games, rock climbing, and weightlifting. I was born and raised in San Diego
-                but am always looking for opportunities to travel and explore new places. I really enjoy trying new foods, so I'm always looking for new places to try and visit with friends and family. On this website
-                you will see the coursework I've done as well as the various projects I've worked on in my time at UCSD. Feel free to reach out to me if you have any questions or would like to connect!
+            <p class = "text">Hi! I'm a software developer with a a background in healthcare and a BS in Pharmacological Chemistry. 
+            I'm passionate about technology and learning new things to improve my skills as a developer to contribute to the field. In my free time, I enjoy piano, video games, rock climbing, weightlifting, and exploring new places and foods. 
+            Check out my portfolio for my projects and feel free to connect!
             </p>
 
             <img class = "mypic" src="./images/mypic.jpeg"  alt="My Picture">
@@ -43,57 +55,23 @@
         </div>
     </section>
 
-    <section class="education">
-        <div class="container">
-            <hr>
-            <h2>Education</h2>
-
-            <div class="degrees">
-                <h3>Degrees</h3>
-                <ul>
-                    <li>B.S Pharmacological Chemistry, UCSD, 2022</li>
-                    <li>M.S Computer Science, UCSD, expected 2025</li>
-                    <!-- Add more degrees if necessary -->
-                </ul>
-            </div>
-            
-            <!-- Current Coursework -->
-
-            
-            <!-- Past Coursework -->
-            <div class="coursework past-coursework">
-                <h3>Coursework</h3>
-                <ul>
-                    <li><span class="course-name">UCSD Extension - Embedded Systems</span>
-                    <li><span class="course-name">UCSD - Human Centered Computing and Health</span>
-                    <li><span class="course-name">UCSD - Graduate Networked Systems</span> 
-                    <li><span class="course-name">UCSD - Principles of Computer Architecture</span> 
-                    <li><span class="course-name">UCSD - Principles of Programming Languages</span>
-                    <li><span class="course-name">UCSD - Principles of Data Base Systems</span> 
-                    <li><span class="course-name">UCSD - Probabilistic Reasoning  Learning</span>
-                    <li><span class="course-name">UCSD - Database System Implementation</span>
-                    <li><span class="course-name">UCSD - Principle of Software Engineering</span>
-                    <li><span class="course-name">UCSD - Algorithm Design and Analysis</span>
-                    <li><span class="course-name">Georgia Tech - Data Structures and Algorithms</span> 
-                    <li><span class="course-name">Georgia Tech - Object Oriented Programming with Java </span> 
-                    <li><span class="course-name">Georgia Tech- Computing in Python</span> 
-
-                    <!-- Add more past courses as needed -->
-                </ul>
-            </div>
-            
-        </div>
-    </section>
-
-    <footer class="contact">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>Email: darrentrieu@gmail.com  <a class = "contact-link" href="https://www.linkedin.com/in/darren-trieu/" target="_blank">LinkedIn </a> <a class = "contact-link" href= "https://github.com/d1trieu123" target="_blank"> Github </a> </p>
-        </div>
-
-    </footer>
 
    
 
 </body>
 </html>
+
+<script>
+    function copyToClipboard() {
+        const email = "darrentrieu@gmail.com";
+        navigator.clipboard.writeText(email).then(function() {
+            const notification = document.getElementById('copy-notification');
+            notification.style.display = 'inline'; // Show the notification
+            setTimeout(function() {
+                notification.style.display = 'none'; // Hide it after 2 seconds
+            }, 2000);
+        }, function(err) {
+            console.error("Could not copy text: ", err);
+        });
+    }
+</script>
