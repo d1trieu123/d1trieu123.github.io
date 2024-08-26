@@ -152,12 +152,11 @@ nav {
     display: none; /* Initially hidden */
     background-color: #4CAF50; /* Green background */
     color: white; /* White text */
-    padding: 5px 10px; /* Some padding */
+    padding: 5px 5px; /* Some padding */
     border-radius: 5px; /* Rounded corners */
-    position: absolute; /* Position relative to the nearest positioned ancestor */
-    top: 150px; /* Adjust position */
-    right: 575px; /* Adjust position */
+    position: fixed; /* Use fixed positioning to follow the cursor */
     z-index: 1000; /* Ensure it's above other elements */
-    font-size: 10px; /* Font size for visibility */
+    font-size: 14px; /* Font size for visibility */
     box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional shadow for pop-out effect */
 }
+
