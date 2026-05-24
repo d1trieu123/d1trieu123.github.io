@@ -1,136 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects - Darren Trieu</title>
+
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
     <header>
         <div class="container">
+
             <h1>Darren Trieu</h1>
-            <p>M.S Computer Science Student - UCSD</p>
+
+            <p class="subtitle">
+                Full Stack & Distributed Systems Engineer
+            </p>
+
+            <p class="subtext">
+                M.S. Computer Science — UC San Diego
+            </p>
+
             <nav>
-                <a class="contact-link" href="index.html">Home</a> | 
-                <a class="contact-link" href="projects.html">My Work</a>
+                <a class="contact-link" href="index.html">Home</a>
+                <a class="contact-link" href="projects.html">Projects</a>
             </nav>
+
             <div class="header-links">
+
                 <a href="https://github.com/d1trieu123" target="_blank">
                     <img src="images/github-icon.png" alt="GitHub" class="icon">
                 </a>
+
                 <a href="https://www.linkedin.com/in/darren-trieu/" target="_blank">
                     <img src="images/linkedin-icon.png" alt="LinkedIn" class="icon">
                 </a>
+
                 <a href="assets/Resume.pdf" target="_blank">
                     <img src="images/resume-icon.png" alt="Resume" class="icon">
                 </a>
+
                 <a href="javascript:void(0);" onclick="copyToClipboard(event)">
-                    <img src="images/email-icon.png" alt="Email" class="icon">
+                    <img src="images/email-icon.png" alt="Email" class="icon email-icon">
                 </a>
+
             </div>
-            <!-- Hidden element for the "Copied!" message -->
-            <span id="copy-notification" class="copy-notification">Copied!</span>
+
+            <span id="copy-notification" class="copy-notification">
+                Copied!
+            </span>
+
         </div>
     </header>
 
     <main>
+
         <section class="projects">
+
             <div class="container">
-                <hr>
+
                 <h2>Projects</h2>
 
-                <div class="project">
-                    <h3>SurfStore <a target="_blank" href="https://github.com/ucsd-cse224-sp24/project-5-d1trieu123">View Repo</a></h3>
-                    <ul class="project-desc">
-                        <li>Created a Dropbox-like application for a networking and distributed systems course at UCSD.</li>
-                        <li>Developed a metadata store and block store across multiple servers for scalability and fault tolerance.</li>
-                        <li>Implemented a version control system and consistent hashing algorithm for file management.</li>
-                        <li>Used the RAFT consensus algorithm to ensure server agreement on the metadata store state.</li>
-                    </ul>
-                </div>
+                <!-- SURFSTORE -->
 
                 <div class="project">
-                    <h3>UCal San Diego <a target="_blank" href="https://github.com/cse210-team5/ucal_san_diego">View Repo</a></h3>
+
+                    <h3>
+                        SurfStore
+                        <a target="_blank" href="https://github.com/ucsd-cse224-sp24/project-5-d1trieu123">
+                            GitHub
+                        </a>
+                    </h3>
+
+                    <p class="tech-stack">
+                        <strong>Tech:</strong>
+                        Go, gRPC, Protocol Buffers, RAFT, Distributed Systems
+                    </p>
+
                     <ul class="project-desc">
-                        <li>Developed a mobile app for UCSD students to track food and calorie intake using React Native.</li>
-                        <li>Built a full-stack application with a MongoDB database for backend data management.</li>
-                        <li>Practiced Agile development, managing backlogs and deliverables in a team setting.</li>
+
+                        <li>
+                            Designed and implemented a distributed cloud storage system
+                            supporting file synchronization and fault-tolerant metadata replication.
+                        </li>
+
+                        <li>
+                            Built a consistent hashing-based BlockStore for scalable
+                            data placement and retrieval across distributed nodes.
+                        </li>
+
+                        <li>
+                            Implemented a RAFT-replicated MetaStore to ensure
+                            consistency and fault tolerance across storage servers.
+                        </li>
+
                     </ul>
-                    <p><img class="demo-gifs" src="images/ucal.gif" alt="ucal gif"></p>
+
                 </div>
 
-                <div class="project">
-                    <h3>Xquery Interpreter <a target="_blank" href="https://github.com/d1trieu123/Xquery-Intepreter">View Repo</a></h3>
-                    <ul class="project-desc">
-                        <li>Created an Xquery interpreter to query XML documents using Java and ANTLR.</li>
-                        <li>Developed an XPath interpreter, extended it to XQuery, and implemented a join operator for query optimization.</li>
-                        <li>Gained experience in database-like operations and large-scale Java project development.</li>
-                    </ul>
-                </div>
+                <!-- UCAL -->
 
                 <div class="project">
-                    <h3>Hangman Probability Web Game <a target="_blank" href="https://github.com/d1trieu123/hangman/tree/main">View Repo</a> <a target="_blank" href="https://d1trieu123.github.io/hangman/">View Demo</a></h3>
+
+                    <h3>
+                        UCal San Diego
+                        <a target="_blank" href="https://github.com/cse210-team5/ucal_san_diego">
+                            GitHub
+                        </a>
+                    </h3>
+
+                    <p class="tech-stack">
+                        <strong>Tech:</strong>
+                        React Native, JavaScript, MongoDB, Node.js
+                    </p>
+
                     <ul class="project-desc">
-                        <li>Extended a homework assignment to create a web-based Hangman game using React.</li>
-                        <li>Implemented a probability-based algorithm to suggest the best guesses in the game.</li>
-                        <li>Integrated learning algorithms with a front-end interface for an interactive user experience.</li>
+
+                        <li>
+                            Developed a full-stack mobile application for tracking
+                            nutrition, meals, and calorie intake for UCSD students.
+                        </li>
+
+                        <li>
+                            Built frontend features in React Native with backend
+                            integration using MongoDB and Node.js services.
+                        </li>
+
+                        <li>
+                            Collaborated in an Agile development environment with
+                            sprint planning, backlog management, and iterative feature delivery.
+                        </li>
+
                     </ul>
-                    <p><img class="demo-gifs" src="./images/hangman.gif" alt="hangman gif"></p>
+
+                    <img class="demo-gifs" src="images/ucal.gif" alt="UCal demo">
+
                 </div>
 
-                <div class="project">
-                    <h3>Terminal Asteroid Typing Game <a target="_blank" href="https://github.com/TeDand/word-game">View Repo</a></h3>
-                    <ul class="project-desc">
-                        <li>Collaborated on a terminal-based game using Haskell and the Brick library.</li>
-                        <li>Learned to navigate new libraries, collaborate in a team, and use Git for version control.</li>
-                        <li>Enhanced skills in debugging, code review, and resolving merge conflicts.</li>
-                    </ul>
-                    <p><img class="demo-gifs" src="./images/word_game_gif.gif" alt="word-game gif"></p>
-                </div>
+                <!-- XQUERY -->
 
                 <div class="project">
-                    <h3>Service Industry TipBot <a target="_blank" href="https://github.com/d1trieu123/tipbot">View Repo</a> <a target="_blank" href="https://d1trieu123.github.io/tipbot/">View Demo</a></h3>
+
+                    <h3>
+                        XQuery Interpreter
+                        <a target="_blank" href="https://github.com/d1trieu123/Xquery-Intepreter">
+                            GitHub
+                        </a>
+                    </h3>
+
+                    <p class="tech-stack">
+                        <strong>Tech:</strong>
+                        Java, ANTLR, XML, Query Optimization
+                    </p>
+
                     <ul class="project-desc">
-                        <li>Developed a tip calculator for servers to log daily tips and sales using React and JavaScript.</li>
-                        <li>Allowed users to filter shifts by day or type to analyze earnings and performance.</li>
-                        <li>Added backend support using Node.js and MongoDB to store user data and enhance functionality.</li>
+
+                        <li>
+                            Built an XQuery interpreter in Java using ANTLR
+                            to parse and evaluate XML-based query expressions.
+                        </li>
+
+                        <li>
+                            Implemented XPath evaluation, XQuery execution,
+                            and optimized join operations for efficient XML querying.
+                        </li>
+
+                        <li>
+                            Developed experience with compiler/interpreter design,
+                            query execution, and large-scale Java systems.
+                        </li>
+
                     </ul>
-                    <p><img class="demo-gifs" src="./images/tipbot.gif" alt="tipbot demo"></p>
+
                 </div>
+
             </div>
+
         </section>
-        <hr>
-        <section class="other-work">
-            <div class="container">
-                <h2>Other Work</h2>
-                <p><a target="_blank" href="https://kadonagalab.biosci.ucsd.edu/" style="color: blue;">UCSD Kadonaga Website</a> - A website I created for my lab during COVID.</p>
-                <p><a target="_blank" href="https://sites.google.com/view/cse-217-final-project/home" style="color: blue;">ResiLens</a> - A website created to outline a VR solution for medical students during my human-centered computing and health course.</p>
-            </div>
-        </section>
+
     </main>
 
 </body>
+
 </html>
 
 <script>
-    function copyToClipboard(event) {
-        const email = "darrentrieu@gmail.com";
-        navigator.clipboard.writeText(email).then(function() {
-            const notification = document.getElementById('copy-notification');
 
-            // Set the position near the cursor
+    function copyToClipboard(event) {
+
+        const email = "darrentrieu@gmail.com";
+
+        navigator.clipboard.writeText(email).then(function () {
+
+            const notification =
+                document.getElementById('copy-notification');
+
             const mouseX = event.clientX;
             const mouseY = event.clientY;
-            notification.style.left = mouseX + 10 + 'px'; // Offset by 10px to the right of the cursor
-            notification.style.top = mouseY + 10 + 'px';  // Offset by 10px below the cursor
 
-            notification.style.display = 'block'; // Show the notification
-            setTimeout(function() {
-                notification.style.display = 'none'; // Hide it after 2 seconds
+            notification.style.left = mouseX + 10 + 'px';
+            notification.style.top = mouseY + 10 + 'px';
+
+            notification.style.display = 'block';
+
+            setTimeout(function () {
+                notification.style.display = 'none';
             }, 500);
-        }, function(err) {
+
+        }, function (err) {
+
             console.error("Could not copy text: ", err);
+
         });
     }
+
 </script>

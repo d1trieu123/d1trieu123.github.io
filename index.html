@@ -1,84 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
     <title>Darren Trieu - Portfolio</title>
-    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
     <header>
         <div class="container">
+
             <h1>Darren Trieu</h1>
-            <p>M.S Computer Science Student - UCSD</p>
+
+            <p class="subtitle">
+                Full Stack & Distributed Systems Engineer
+            </p>
+
+            <p class="subtext">
+                M.S. Computer Science — UC San Diego
+            </p>
+
             <nav>
-                <a class="contact-link" href="index.html">Home</a> | 
-                <a class="contact-link" href="projects.html">My Work</a>
+                <a class="contact-link" href="index.html">Home</a>
+                <a class="contact-link" href="projects.html">Projects</a>
             </nav>
+
             <div class="header-links">
+
                 <a href="https://github.com/d1trieu123" target="_blank">
                     <img src="images/github-icon.png" alt="GitHub" class="icon">
                 </a>
+
                 <a href="https://www.linkedin.com/in/darren-trieu/" target="_blank">
                     <img src="images/linkedin-icon.png" alt="LinkedIn" class="icon">
                 </a>
+
                 <a href="assets/Resume.pdf" target="_blank">
                     <img src="images/resume-icon.png" alt="Resume" class="icon">
                 </a>
+
                 <a href="javascript:void(0);" onclick="copyToClipboard(event)">
-                    <img src="images/email-icon.png" alt="Email" class="icon">
+                    <img src="images/email-icon.png" alt="Email" class="icon email-icon">
                 </a>
+
             </div>
-            <!-- Hidden element for the "Copied!" message -->
-            <span id="copy-notification" class="copy-notification">Copied!</span>
+
+            <span id="copy-notification" class="copy-notification">
+                Copied!
+            </span>
+
         </div>
     </header>
-    
-    
+
+    <!-- ABOUT -->
 
     <section class="about-me">
-        <div class="container">
-            <h2>About Me</h2>
-            
-            <div class="about-pic">
-                
-            
-            <p class = "text">Hi! I'm a software developer with a a background in healthcare and a BS in Pharmacological Chemistry. 
-            I'm passionate about technology and learning new things to improve my skills as a developer to contribute to the field. In my free time, I enjoy piano, video games, rock climbing, weightlifting, and exploring new places and foods. 
-            Check out my portfolio for my projects and feel free to connect!
-            </p>
 
-            <img class = "mypic" src="./images/mypic.jpeg"  alt="My Picture">
+        <div class="container">
+
+            <h2>About Me</h2>
+
+            <div class="about-pic">
+
+                <p class="text">
+                    Software engineer focused on distributed systems, backend infrastructure, and
+                    real-time operational platforms. I enjoy building scalable services,
+                    high-throughput messaging systems, and AI-integrated applications using
+                    technologies like C++, Python, JavaScript, Kubernetes, and modern cloud tooling.
+                </p>
+
+                <p class="text">
+                    Currently, I work at General Atomics developing distributed systems and
+                    operational control software, with work spanning platform integration,
+                    logging infrastructure, and CI/CD workflows.
+                </p>
+
+                <p class="text">
+                    I completed my M.S. in Computer Science at UC San Diego, where I worked on
+                    distributed storage systems, vector search infrastructure, and AI-assisted
+                    applications.
+                </p>
+
+                <p class="text">
+                    Outside of engineering, I enjoy rock climbing, piano, fitness, gaming,
+                    and exploring new food spots.
+                </p>
+
+                <img class="mypic" src="./images/mypic.jpeg" alt="Darren Trieu">
+
+            </div>
+
         </div>
-        </div>
+
     </section>
 
+    <hr class="section-divider">
 
-   
+    <!-- EXPERIENCE -->
+
+    <section class="experience">
+
+        <div class="container">
+
+            <h2>Experience</h2>
+
+            <div class="experience-item">
+
+                <h3>
+                    Software Engineer — General Atomics
+                </h3>
+
+                <p class="experience-date">
+                    Apr. 2025 – Present
+                </p>
+
+                <p class="text">
+                    Developing distributed systems and operational control software focused on
+                    real-time communication, high-throughput logging infrastructure, and
+                    cross-platform integration.
+                </p>
+
+                <p class="text">
+                    Leading development efforts across distributed services, platform integration,
+                    and CI/CD workflows using technologies including C++, React, Kubernetes,
+                    and Podman.
+                </p>
+
+            </div>
+
+            <div class="experience-item">
+
+                <h3>
+                    Software Engineering Intern — UCSD Weibel Lab
+                </h3>
+
+                <p class="experience-date">
+                    Jun. 2024 – Apr. 2025
+                </p>
+
+                <p class="text">
+                    Built backend and AI-assisted medical applications involving vector search
+                    infrastructure, OpenAI workflows, real-time communication systems,
+                    and clinical decision-support tooling.
+                </p>
+
+                <p class="text">
+                    Developed APIs and backend services using Node.js, Express, MongoDB,
+                    Socket.IO, and Deepgram integrations.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
 
 </body>
+
 </html>
 
 <script>
-    function copyToClipboard(event) {
-        const email = "darrentrieu@gmail.com";
-        navigator.clipboard.writeText(email).then(function() {
-            const notification = document.getElementById('copy-notification');
 
-            // Set the position near the cursor
+    function copyToClipboard(event) {
+
+        const email = "darrentrieu@gmail.com";
+
+        navigator.clipboard.writeText(email).then(function () {
+
+            const notification =
+                document.getElementById('copy-notification');
+
             const mouseX = event.clientX;
             const mouseY = event.clientY;
-            notification.style.left = mouseX + 10 + 'px'; // Offset by 10px to the right of the cursor
-            notification.style.top = mouseY + 10 + 'px';  // Offset by 10px below the cursor
 
-            notification.style.display = 'block'; // Show the notification
-            setTimeout(function() {
-                notification.style.display = 'none'; // Hide it after 2 seconds
+            notification.style.left = mouseX + 10 + 'px';
+            notification.style.top = mouseY + 10 + 'px';
+
+            notification.style.display = 'block';
+
+            setTimeout(function () {
+                notification.style.display = 'none';
             }, 500);
-        }, function(err) {
+
+        }, function (err) {
+
             console.error("Could not copy text: ", err);
+
         });
     }
+
 </script>
